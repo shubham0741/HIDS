@@ -11,7 +11,7 @@ Make different Server files and run. This will create a server on the port and l
 server.py # Enter the port on which you want to create server and then atack it for proof of concept from attacker.py file. 
 import socket as s
 
-port=int(input("Enter Porrt to scan on"))
+port=int(input("Enter Port to scan on"))
 c=s.socket(s.AF_INET,s.SOCK_STREAM)
 print("Socket created successfully")
 c.bind((s.gethostbyname("Localhost"),port))
@@ -19,7 +19,7 @@ c.listen(1)
 print("Waiting for connection on ", port )
 while True:
     s,a=c.accept()
-    print("Malicious connected on port 970 with  ip and port",a)
+    print("Malicious connected on port with  ip and port",a)
     s.close()
 c.close()
 
